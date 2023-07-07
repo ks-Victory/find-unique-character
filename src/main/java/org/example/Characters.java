@@ -26,7 +26,9 @@ public class Characters {
                 uniqueChars.add(ch);
             }
         });
-
+        if(uniqueChars.isEmpty()){
+            throw new IllegalArgumentException("There are no matches.");
+        }
         return uniqueChars.get(0);
     }
 }
